@@ -1,0 +1,32 @@
+//
+// Created by ded on 4/10/26.
+//
+#include "max7219.h"
+
+void epos_startup() {
+    MAX7219_Write( MAX7219_REG_DECODE_MODE, 0x00, CS_GPIO_Port_A, CS_Pin_A15);
+    // MAX7219_Write( MAX7219_REG_DECODE_MODE, 0x00, CS_GPIO_Port_C, CS_Pin_C11);
+
+    MAX7219_Write(MAX7219_REG_DIGIT6, 0b01001111, CS_GPIO_Port_A, CS_Pin_A15);
+    MAX7219_Write(MAX7219_REG_DIGIT2, 0b01100111, CS_GPIO_Port_A, CS_Pin_A15);
+    MAX7219_Write(MAX7219_REG_DIGIT3, 0b01111110, CS_GPIO_Port_A, CS_Pin_A15);
+    MAX7219_Write(MAX7219_REG_DIGIT4, 0b01011011, CS_GPIO_Port_A, CS_Pin_A15);
+
+    // MAX7219_Write(MAX7219_REG_DECODE_MODE, 0xFF, CS_GPIO_Port_A, CS_Pin_A15);
+
+    MAX7219_Write(MAX7219_REG_DIGIT7, 0b00000001, CS_GPIO_Port_A, CS_Pin_A15);
+    MAX7219_Write(MAX7219_REG_DIGIT5, 0x00000001, CS_GPIO_Port_A, CS_Pin_A15);
+    MAX7219_Write(MAX7219_REG_DIGIT1, 0x00000001, CS_GPIO_Port_A, CS_Pin_A15);
+    MAX7219_Write(MAX7219_REG_DIGIT0, 0x00000001, CS_GPIO_Port_A, CS_Pin_A15);
+
+
+    MAX7219_SendDigit(6, 0x0A, CS_GPIO_Port_C, CS_Pin_C11);
+    MAX7219_SendDigit(2, 0x0A, CS_GPIO_Port_C, CS_Pin_C11);
+    MAX7219_SendDigit(3, 0x0A, CS_GPIO_Port_C, CS_Pin_C11);
+    MAX7219_SendDigit(4, 0x0A, CS_GPIO_Port_C, CS_Pin_C11);
+
+    MAX7219_SendDigit(7, 0x0A, CS_GPIO_Port_C, CS_Pin_C11);
+    MAX7219_SendDigit(5, 0x0A, CS_GPIO_Port_C, CS_Pin_C11);
+    MAX7219_SendDigit(1, 0x0A, CS_GPIO_Port_C, CS_Pin_C11);
+    MAX7219_SendDigit(0, 0x0A, CS_GPIO_Port_C, CS_Pin_C11);
+}
