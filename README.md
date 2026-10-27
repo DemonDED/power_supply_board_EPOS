@@ -3,7 +3,7 @@ My work on the power board firmware at EPOS.
 
 # Лабораторный блок питания (STM32 / Embedded)
 
-[![Видео-демонстрация]](https://youtube.com/playlist?list=PL1Fz6-nHFQaS-iLbRM0mhvYPwvbIchvey&si=EExdttfEdGngbPXH)
+[Видео-демонстрация]](https://youtube.com/playlist?list=PL1Fz6-nHFQaS-iLbRM0mhvYPwvbIchvey&si=EExdttfEdGngbPXH)
 
 ## О проекте
 
